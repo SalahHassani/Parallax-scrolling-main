@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url('https://wallpaperaccess.com/full/12694.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  z-index: 1000; /* Stay on top */
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar .logo {
+  font-family: 'Gruppo', cursive;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* Highlight color */
+}
+
+.cta-button {
+  background: #ffcc00;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #e6b800; /* Darker shade on hover */
+}
+
+/* Add this to your existing styles.css */
+
+.background {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://149347190.v2.pressablecdn.com/wp-content/uploads/2019/05/japanese-food-1-1024x681.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure it sits above the background but below the text */
+}
+
+.background h1 {
+  position: relative; /* Position text above the overlay */
+  font-family: 'Gruppo', cursive;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+h1 {
+  font-family: 'Gruppo', cursive;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Split Section Styling */
+.split-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  overflow: hidden; /* Hide overflowing elements */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translateX(0); /* Reset transform */
+  transition: transform 0.6s ease; /* Smooth transition for split effect */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.text-overlay {
+  flex: 1;
+  position: relative;
+  color: #fff;
+  max-width: 600px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  text-align: center; /* Center the text */
+  transform: translateX(0); /* Reset transform */
+  transition: transform 0.6s ease; /* Smooth transition for split effect */
+}
+
+.text-overlay h2 {
+  font-family: 'Gruppo', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.text-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  width: 300px; /* Fixed width for testimonials */
+}
+
+.testimonial:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .background h1 {
+    font-size: 2rem;
+  }
+
+  .text-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .text-overlay p {
+    font-size: 1rem;
+  }
+
+  .testimonial {
+    width: 90%; /* Responsive width */
+  }
+
+  .navbar .nav-links {
+    flex-direction: column; /* Stack links on smaller screens */
+  }
+
+  .navbar .nav-links li {
+    margin: 5px 0; /* Spacing adjustments */
+  }
+}
+
+
+/* General Section Styles */
+.section {
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden; /* Ensure content doesn't overflow the section */
+}
+
+/* Dark Overlay for Sections */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* 20% opacity black overlay */
+  z-index: 1; /* Make sure it is behind text content */
+}
+
+.section h2, .section p {
+  position: relative; /* Ensure text is on top of the overlay */
+  z-index: 2; /* Make sure text is above overlay */
+  color: white; /* Set text color to white for contrast */
+}
+
+/* Additional Styles for Specific Sections */
+.split-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* For entry animation */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+}
+
+.split-image, .split-text {
+  flex: 1;
+  padding: 2rem;
+  z-index: 2; /* Ensure split content is above the overlay */
+}
+
+.split-image img {
+  width: 100%;
+  border-radius: 10px;
+}
